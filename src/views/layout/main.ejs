@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://bootswatch.com/4/cerulean/bootstrap.min.css" />
+    <title>Login NodeJS</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">Login NodeJS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav ml-auto">
+            <%if (user){ %>
+                <a class="nav-link" href="/profile">Perfil</a>
+                <a class="nav-link" href="/logout">Salir</a>
+            <% } else{ %>
+                <a class="nav-link" href="/signin">Logearse</a>
+                <a class="nav-link" href="/signup" tabindex="-1" aria-disabled="true">Registrarse</a>
+            <%} %>
+            
+          </div>
+        </div>
+      </nav>
+
+    <div class="container">
+
+    <% if (signupMessage.length>0){ %>
+        <div class="alert alert-danger mt-4"><%=signupMessage %></div>
+    <% } %>  
+    <% if (signinMessage.length>0){ %>
+        <div class="alert alert-danger mt-4"><%=signinMessage %></div>
+    <% } %>  
+    
+    <%- body %>
+
+
+    </div>
+
+</body>
+</html>
