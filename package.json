@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "keywords": [],
   "author": "Mariano Ozamis",
@@ -16,6 +16,7 @@
     "ejs-mate": "^3.0.0",
     "express": "^4.17.1",
     "express-session": "^1.17.1",
+    "jest": "^26.4.2",
     "mongoose": "^5.9.27",
     "morgan": "^1.10.0",
     "passport": "^0.4.1",
